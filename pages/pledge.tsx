@@ -22,16 +22,17 @@ export default function PledgePage() {
     setStatus('submitting')
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzZieNLs-DPx-eDgngCg9qnAKZMXmtnLgesh2iTUf-H-m3my7m-lmSquoC7V9lbSngT/exec', {
+      const res = await fetch('/api/pledge', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
 
-      window.location.href = '/thank-you'
+      if (res.ok) {
+        window.location.href = '/thank-you'
+      } else {
+        setStatus('error')
+      }
     } catch {
       setStatus('error')
     }
