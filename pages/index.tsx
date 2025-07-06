@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen text-white flex items-center justify-center px-6 py-16 bg-black">
+    <div className="relative min-h-screen font-elegant text-white flex items-center justify-center px-6 py-16 bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/A_photograph_captures_four_fashionable_young_adult.png"
-          alt="SOCIIETY background"
+          src="/images/sociiety-bg.png"
+          alt="SOCIIETY fashion background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -20,14 +20,16 @@ export default function Home() {
         </h1>
 
         <p className="text-lg md:text-xl text-yellow-100 mb-10 max-w-2xl mx-auto">
-          A members-only fashion ecosystem for creatives, visionaries, and culture leaders. Designed for those who stand out — and finally want to belong.
+          A members-only fashion ecosystem for creatives, visionaries, and culture leaders.
+          Designed for those who stand out — and finally want to belong.
         </p>
 
         <div className="space-y-6 text-yellow-100 mb-12">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-yellow-400">About SOCIIETY</h2>
             <p>
-              SOCIIETY isn’t just a brand. It’s a sanctuary for self-expression, powered by rare fashion, curated connection, and intentional community.
+              SOCIIETY isn’t just a brand. It’s a sanctuary for self-expression, powered by rare fashion,
+              curated connection, and intentional community. We welcome the misunderstood, the elite, and the unapologetically creative.
             </p>
           </div>
 
