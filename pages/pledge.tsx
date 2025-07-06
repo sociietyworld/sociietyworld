@@ -31,8 +31,7 @@ export default function PledgePage() {
         body: JSON.stringify(form),
       })
 
-      setStatus('success')
-      setForm({ name: '', instagram: '', address: '', email: '', phone: '' })
+      window.location.href = '/thank-you'
     } catch {
       setStatus('error')
     }
@@ -70,9 +69,9 @@ export default function PledgePage() {
           {status === 'submitting' ? 'Submitting...' : 'Submit'}
         </button>
 
-        {status === 'success' && <p className="text-green-600 text-center">Thanks! We've received your pledge.</p>}
         {status === 'error' && <p className="text-red-600 text-center">Something went wrong. Please try again.</p>}
       </form>
     </div>
   )
 }
+
